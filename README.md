@@ -1,0 +1,1 @@
+ejercicios propuestos en clase

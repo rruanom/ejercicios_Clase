@@ -9,4 +9,19 @@ function contarLetras(frase, letra){
         }
     }
     return count;
+};
+
+/*Ejercicio 2:
+Diseña un algoritmo que imprima los números impares entre un número dado por el usuario y los siguientes 50 números
+*/
+function numerosImpares(numeroRamdom){
+    let arrImpares = [];
+    for(let i = numeroRamdom; i < numeroRamdom + 50; i++){
+        if (i % 2 !== 0) {
+            arrImpares.push(i);
+        }
+    }
+    return arrImpares;
 }
+
+

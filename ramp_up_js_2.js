@@ -13,3 +13,12 @@ lo corrijo haciendo el bucle a .length -1 y sumando la última letra a parte. */
     palabraSeparada = palabraSeparada + palabraMayuscula[palabraMayuscula.length -1];
     return palabraSeparada;
 };
+
+/*Ejercicio 2
+Declara una función que acepte un nombre como parámetro y 
+devuelva el número de palabras que tiene el nombre. Ejemplo: Para "Antonio Alberto Jesús" devolverá 3.*/
+function contarPalabras(nombreCompuesto){
+    let arrayNombre = nombreCompuesto.splite(" ");
+    let respuesta = arrayNombre.length;
+    return respuesta;
+};

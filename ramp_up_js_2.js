@@ -25,4 +25,4 @@ function contarPalabras(nombreCompuesto){
     arrayNombre = arrayNombre.length
     return arrayNombre;
 };
-// se pueden usar metodos encadenados o hacerlo por partes
+// se pueden usar metodos encadenados o hacerlo por partes dependiendo del caso es mejor uno u otro

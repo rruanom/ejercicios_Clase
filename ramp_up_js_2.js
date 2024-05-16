@@ -8,9 +8,10 @@ function separarLetras(palabraAleatoria){
 /* al principio lo hice con un for de limite palabraMayuscula.length pero me daba un espacio al final.
 lo corrijo haciendo el bucle a .length -1 y sumando la última letra a parte. */
     for(let i = 0; i < palabraMayuscula.length -1; i++) {
-        palabraSeparada = palabraSeparada + palabraMayuscula[i] + " "
+        palabraSeparada += palabraMayuscula[i] + " "
+        //`${palabraMayusculas[i]} patata`
     };
-    palabraSeparada = palabraSeparada + palabraMayuscula[palabraMayuscula.length -1];
+    palabraSeparada += palabraMayuscula[palabraMayuscula.length -1];
     return palabraSeparada;
 };
 
@@ -18,7 +19,6 @@ lo corrijo haciendo el bucle a .length -1 y sumando la última letra a parte. */
 Declara una función que acepte un nombre como parámetro y 
 devuelva el número de palabras que tiene el nombre. Ejemplo: Para "Antonio Alberto Jesús" devolverá 3.*/
 function contarPalabras(nombreCompuesto){
-    let arrayNombre = nombreCompuesto.split(" ");
-    let respuesta = arrayNombre.length;
-    return respuesta;
+    let arrayNombre = nombreCompuesto.trim.split(" ").length;
+    return arrayNombre;
 };

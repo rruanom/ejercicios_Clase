@@ -36,9 +36,9 @@ Se solicita al usuario que ingrese por teclado 10 números, el programa devolver
 function solicitarNumeros() {
     let numeros = [];
     let cuenta = prompt("ingresa la cantidad de numeros")
-    cantidad = parseInt(cuenta, 10)
+    let cantidad = parseInt(cuenta, 10)
     for (let i = 0; i < cantidad; i++) {
-    let num = prompt ("ingresa un numero, te quedan " + cantidad);
+    let num = prompt (`ingresa un numero, te quedan ${cantidad}`);
     let num2 = parseInt(num,10)
     numeros.push(num2)
     cantidad--
@@ -48,37 +48,46 @@ function solicitarNumeros() {
 
 function contarPositivos (listaNumeros){
     let count = 0;
+    let numerosPositivos = []
     for (let i = 0; i < listaNumeros.length; i++){
         if (listaNumeros[i] >= 0){
             count++
+            numerosPositivos.push(listaNumeros[i])
         }
     }
-    return count;
+    return "hay " + count + " numeros positivos, que son: " + numerosPositivos;
 }
+
 function contarNegativos (listaNumeros){
     let count = 0;
+    let numerosNegativos = []
     for (let i = 0; i < listaNumeros.length; i++){
         if (listaNumeros[i] < 0){
             count++
+            numerosNegativos.push(listaNumeros[i])
         }
     }
-    return count
+    return "hay " + count + " numeros negativos, que son: " + numerosNegativos;
 }
+
 function contarPares (listaNumeros){
     let count = 0;
+    let numerosPares = []
     for (let i = 0; i < listaNumeros.length; i++){
         if (listaNumeros[i] % 2 == 0){
             count++
+            numerosPares.push(listaNumeros[i])
         }
     }
-    return count
+    return "hay " + count + " numeros pares, que son: " + numerosPares;
 }
+
 
 function devolverNumeros (){
     let listado = solicitarNumeros()
     let positivos = contarPositivos(listado)
     let negativos = contarNegativos(listado)
     let pares = contarPares(listado)
-    return ("Cantidad de positivos: " + positivos + "; cantidad de negativos: " + negativos + "; cantidad de pares: " + pares)
+    return positivos + " // " + negativos + " // " + pares
 };
 
